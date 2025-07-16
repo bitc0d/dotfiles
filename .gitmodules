@@ -1,0 +1,15 @@
+[submodule "utils/polybar-themes"]
+	path = utils/polybar-themes
+	url = https://github.com/bitc0d/polybar-themes
+[submodule "utils/ohmyzsh"]
+	path = utils/ohmyzsh
+	url = https://github.com/bitc0d/ohmyzsh
+[submodule "utils/neovim"]
+	path = utils/neovim
+	url = https://github.com/bitc0d/neovim
+[submodule "utils/zsh-autosuggestions"]
+	path = utils/zsh-autosuggestions
+	url = https://github.com/bitc0d/zsh-autosuggestions
+[submodule "utils/zsh-syntax-highlighting"]
+	path = utils/zsh-syntax-highlighting
+	url = https://github.com/bitc0d/zsh-syntax-highlighting

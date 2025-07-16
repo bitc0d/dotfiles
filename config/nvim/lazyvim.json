@@ -1,0 +1,16 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.lang.ansible",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.helm",
+    "lazyvim.plugins.extras.lang.sql",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.util.gitui"
+  ],
+  "install_version": 8,
+  "news": {
+    "NEWS.md": "10960"
+  },
+  "version": 8
+}

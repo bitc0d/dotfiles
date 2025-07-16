@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# cp ~/.config/i3/images/lock.png /tmp/screen_locked.png
+# maim /tmp/screen_locked.png
+# convert /tmp/screen_locked.png -blur 2x2  -charcoal 1 -colorize 70%   /tmp/screen_locked.png
+# convert /tmp/screen_locked.png -blur 1x1  -implode 1 -colorize 20%   /tmp/screen_locked.png
+# #convert /tmp/screen_locked.png -pointsize 50 -fill white -draw 'text 300,200 "TxGVNN"' /tmp/screen_locked.png
+# convert /tmp/screen_locked.png -scale 20% -scale 500% /tmp/screen_locked.png
+# convert /tmp/screen_locked.png ~/.config/i3/lock.png -gravity center -composite -matte /tmp/screen_locked.png
+# if ! i3lock -i /tmp/screen_locked.png; then
+#     return 1
+# fi
+# xset dpms force off
+
+# ICON=$HOME/.config/i3/images/iconLock.png
+# TMPBG=/tmp/screen.png
+# maim $TMPBG
+# convert $TMPBG -scale 10% -scale 1000% $TMPBG
+# convert $TMPBG $ICON -gravity center -composite -matte $TMPBG
+# i3lock -u -i $TMPBG
+# rm -rf $TMPBG
+ 
+IMAGE=/tmp/lockscreen.png
+TEXT=/tmp/locktext.png
+ICON=$HOME/.config/i3/images/iconLock.png
+ 
+maim $IMAGE
+convert $IMAGE -scale 10% -scale 1000% -fill black -colorize 25% $IMAGE
+[ -f $TEXT ] || { 
+    convert -size 3000x60 xc:white -font Liberation-Sans -pointsize 26 -fill black -gravity center -annotate +0+0 'Type password to unlock' $TEXT;
+    convert $TEXT -alpha set -channel A -evaluate set 50% $TEXT; 
+}
+convert $IMAGE $TEXT -gravity center -geometry +0+200 -composite $IMAGE
+convert $IMAGE $ICON -gravity center -composite -matte $IMAGE
+i3lock -u -i $IMAGE
