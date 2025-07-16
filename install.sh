@@ -98,8 +98,8 @@ function configureTerminal() {
 
   # Install ohmyzsh
   cp -R ~/.dotfiles/utils/ohmyzsh ~/.oh-my-zsh >>$LOG_OUTPUT 2>&1
-  cp -R ~/.dotfiles/utils/zsh-autosuggestions/ ~/.oh-my-zsh/custom/plugins/ >>$LOG_OUTPUT 2>&1
-  cp -R ~/.dotfiles/utils/zsh-syntax-highlighting/ ~/.oh-my-zsh/custom/plugins/ >>$LOG_OUTPUT 2>&1
+  cp -R ~/.dotfiles/utils/zsh-autosuggestions/ ~/.oh-my-zsh/plugins// >>$LOG_OUTPUT 2>&1
+  cp -R ~/.dotfiles/utils/zsh-syntax-highlighting/ ~/.oh-my-zsh/plugins/ >>$LOG_OUTPUT 2>&1
 
   rm -rf ~/.zshrc && ln -s ~/.dotfiles/.zshrc ~/.zshrc >>$LOG_OUTPUT 2>&1
   rm -rf ~/.tmux.conf && ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf >>$LOG_OUTPUT 2>&1
